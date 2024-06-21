@@ -13,7 +13,7 @@ console.log(holdCabinet1.slice(1,3));
 console.log(holdCabinet2.slice(1,3));
 console.log(holdCabinet1);
 console.log(holdCabinet2);
-
+//comment
 
 //3) reverse the first array, and sort the second. What is the difference between these two methods? Do the methods alter the original arrays?
 holdCabinet1.reverse();
