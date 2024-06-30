@@ -29,6 +29,23 @@ console.log("Hold status: " + holdStatus(cargoHold));
  
 //a). Define an anonymous function and set it equal to a variable with a normal, non-suspicious name. The function takes one parameter. This will be the fuel level on the shuttle.
 
+let nonSuspiciousFunction = function(n) {
+  if (checkFuel(n) === 'green') {
+     return n - 100001;
+  }
+  else if (checkFuel(a) === 'yellow') {
+     return n - 50001;
+  }
+  else {
+     return n;
+  }
+};
+
+// let siphonedFuel = [fuelLevel].map(nonSuspiciousFunction);
+// fuelLevel -= siphonedFuel;
+// console.log();
+// console.log("Fuel level: " + checkFuel(fuelLevel));
+
 //b). You must siphon off fuel without alerting the TAs. Inside your function, you want to reduce the fuel level as much as possible WITHOUT changing the color returned by the checkFuel function.
 
 //c). Once you figure out how much fuel to pump out, return that value.
@@ -37,6 +54,22 @@ console.log("Hold status: " + holdStatus(cargoHold));
 
 /* Next, liberate some of that glorious cargo.
  */
+
+let innocentVar = function(arr){
+  let newArr = [];
+
+  newArr.push(arr[3]);
+  arr[3] = 'various metals';
+  newArr.push(arr[4]);
+  arr[4] = 'bronze';
+
+  return newArr;
+}
+
+// let stolenCargo = [cargoHold].map(innocentVar);
+// console.log(stolenCargo);
+// console.log(cargoHold);
+// console.log("Hold status: " + holdStatus(cargoHold));
 
 //a). Define another anonymous function with an array as a parameter, and set it equal to another innocent variable.
 
@@ -50,7 +83,15 @@ console.log("Hold status: " + holdStatus(cargoHold));
  */
  
 //a). Define a function called irs that can take fuelLevel and cargoHold as arguments.
-	
+
+let irs = function(levelOfFuel, itemsInCargo) {
+  let arr = innocentVar(itemsInCargo);
+  return `Raided ${nonSuspiciousFunction(fuelLevel)} kg of fuel from the tanks, and stole ${arr[0]} and ${arr[1]} from the cargo hold.`
+}
+
+
+let robbery = irs(fuelLevel, cargoHold);
+console.log(robbery);
 //b). Call your anonymous fuel and cargo functions from within irs.
 
 //c). Use a template literal to return, "Raided _____ kg of fuel from the tanks, and stole ____ and ____ from the cargo hold."
