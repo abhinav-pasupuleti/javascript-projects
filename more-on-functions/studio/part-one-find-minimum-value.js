@@ -18,4 +18,6 @@ function findMinValue(arr){
     return min;
 }
 
+console.log(findMinValue(nums1));
+console.log(findMinValue(nums2));
 console.log(findMinValue(nums3));

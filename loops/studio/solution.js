@@ -16,8 +16,8 @@ function mealAssembly(protein, grains, veggies, beverages, desserts, numMeals) {
 
   /// Part A #2: Write a ``for`` loop inside this function
   /// Code your solution for part A #2 below this comment (and above the return statement) ... ///
-  //console.log(pantry);
-  for (let i = 0; i < numMeals; i++) {
+  console.log(pantry);
+  for (let i = 0; i < numMeals; i++) { 
     for (let k = 0; k < pantry.length; k++) {
       temp.push(pantry[k][i]);
     }
@@ -33,7 +33,7 @@ function askForNumber() {
   numMeals = input.question("How many meals would you like to make?");
 
   /// CODE YOUR SOLUTION TO PART B here ///
-  while (numMeals > 6 || numMeals < 1) {
+  while (numMeals > 6 || numMeals < 1 || isNaN(numMeals)) {
     numMeals = input.question("That is an INVALID amount of meals. Please enter a valid amount of meals: ");
   }
 
